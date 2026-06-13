@@ -1,69 +1,113 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Conception Premium - 2 Semaines | PagePro CI</title>
-<style>
-body { 
-    font-family: Arial, sans-serif; 
-    background: #f8f9fa; 
-    margin: 0; 
-    padding: 20px;
-    color: #333;
-}
-.container { 
-    max-width: 600px; 
-    margin: auto; 
-    background: white; 
-    padding: 30px; 
-    border-radius: 12px; 
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
-.header { 
-    background: #25D366; 
-    color: white; 
-    padding: 20px; 
-    border-radius: 8px; 
-    text-align: center; 
-    margin-bottom: 25px;
-}
-.prix { 
-    font-size: 42px; 
-    font-weight: bold; 
-    color: #25D366; 
-    text-align: center; 
-    margin: 40px 0;
-}
-.btn { 
-    display: block; 
-    background: #25D366; 
-    color: white; 
-    padding: 18px; 
-    text-align: center; 
-    border-radius: 8px; 
-    text-decoration: none; 
-    font-weight: bold; 
-    font-size: 18px; 
-    margin-top: 30px;
-}
-</style>
+  <!-- 1. INFOS DE BASE : titre, encodage, mobile -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PagePro CI - Site Premium</title>
+
+  <!-- 2. CSS : Style soigné + animation bouton -->
+  <style>
+    /* Reset de base pour que ça soit propre partout */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: #333;
+      padding: 20px;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Conteneur principal de la page */
+    .container {
+      max-width: 700px;
+      background: white;
+      padding: 50px 40px;
+      border-radius: 20px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+      text-align: center;
+      animation: fadeIn 0.8s ease-in;
+    }
+
+    /* Animation d'apparition de la page */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+      color: #667eea;
+    }
+
+    p {
+      font-size: 1.1rem;
+      color: #666;
+      margin-bottom: 30px;
+      line-height: 1.6;
+    }
+
+    /* 3. BOUTON PREMIUM avec animation au survol */
+    .btn {
+      display: inline-block;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 16px 40px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.3s ease; /* transition douce */
+      box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+    }
+
+    /* Effet quand on passe la souris */
+    .btn:hover {
+      transform: translateY(-3px) scale(1.05);
+      box-shadow: 0 8px 25px rgba(102, 126, 234, 0.6);
+    }
+
+    /* Effet quand on clique */
+    .btn:active {
+      transform: translateY(-1px) scale(1.02);
+    }
+  </style>
 </head>
 <body>
-<div class="container">
-    <div class="header">
-        <h1>2 SEMAINES - CONCEPTION PREMIUM</h1>
-        <p>Site vitrine pro livré en 14 jours</p>
-    </div>
+
+  <!-- 4. CONTENU DE LA PAGE -->
+  <div class="container">
+    <h1>Bienvenue sur PagePro CI</h1>
+    <p>Votre site premium est en ligne. Design moderne, responsive, et animations fluides. Tout est prêt pour impressionner vos clients.</p>
     
-    <h2>Votre site professionnel clé en main</h2>
-    <p>Design moderne, responsive mobile, hébergement inclus, support WhatsApp.</p>
-    
-    <div class="prix">28 000 FCFA</div>
-    
-    <a href="https://wa.me/2250575570479?text=Je%20veux%20mon%20site%20premium" class="btn">
-        Commander sur WhatsApp
-    </a>
-</div>
+    <!-- Bouton avec animation -->
+    <button class="btn" onclick="cliqueBouton()">Découvrir plus</button>
+  </div>
+
+  <!-- 5. JAVASCRIPT : Interaction utilisateur -->
+  <script>
+    // Fonction qui se déclenche quand on clique le bouton
+    function cliqueBouton() {
+      alert('Merci ! Votre site premium fonctionne parfaitement 🚀');
+      
+      // Tu peux remplacer l'alert par une redirection :
+      // window.location.href = 'https://ton-lien.com';
+    }
+
+    // Petit effet : message dans la console quand la page charge
+    console.log('PagePro CI chargé avec succès !');
+  </script>
+
 </body>
 </html>
